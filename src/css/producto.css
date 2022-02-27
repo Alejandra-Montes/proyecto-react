@@ -1,0 +1,9 @@
+.cuadro {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
