@@ -1,9 +1,18 @@
 .cuadro {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+}
+.cuadro:hover {
+    background-color: gray;
+}
+
+.name{
+    font-family: fantasy;
+    font-weight: 700;
+    font-size: large;
 }
