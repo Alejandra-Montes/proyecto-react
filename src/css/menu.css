@@ -7,7 +7,7 @@
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 16px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -20,4 +20,10 @@
   .topnav a.active {
     background-color: #04AA6D;
     color: white;
+  }
+
+  .icono{
+    margin-top: 5px;
+    margin-right: 20px;
+    float: right;
   }

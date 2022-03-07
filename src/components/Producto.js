@@ -10,6 +10,7 @@ function Producto(props){
             <img src={nmbr.ruta} />
             <Agregar />
             <label className='name'>{nmbr.nombre}</label>
+            <label className='name'>$ {nmbr.precio}</label>
           </div>
         ))}
       </div>
