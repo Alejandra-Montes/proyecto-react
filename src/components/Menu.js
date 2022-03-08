@@ -3,27 +3,25 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-const StyledBadge = styled(Badge)(({ theme }) => ({
-    '& .MuiBadge-badge': {
-      right: -3,
-      top: 13,
-      border: `2px solid ${theme.palette.background.paper}`,
-      padding: '0 4px',
-    },
-  }));
-
+import { Link, useNavigate } from 'react-router-dom';
   
-function Menu(){
+const Menu =() => {
+    const navigate = useNavigate()
+    function prueba (event){
+        event.preventDefault()
+        navigate("/contacto")
+    }
+
     return (
         <div className="topnav">
-            <a className="active" href="#news">Productos</a>
-            <a href="#contact">Contacto</a>
+           <Link to="/">Productos</Link>
+           <Link to="/contacto">Contacto</Link>
             <div className='icono'>
-            <IconButton aria-label="cart">
-            <Badge badgeContent={4} color="secondary">
-                <ShoppingCartIcon fontSize="large" sx={{ color: 'white' }}/>
-            </Badge>
-            </IconButton>
+                <IconButton aria-label="cart" onClick={prueba}>
+                <Badge badgeContent={4} color="secondary">
+                    <ShoppingCartIcon fontSize="large" sx={{ color: 'white' }}/>
+                </Badge>
+                </IconButton>
             </div>
         </div>
     )
