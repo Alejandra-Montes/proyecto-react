@@ -1,29 +1,47 @@
 import '../css/menu.css'
-import Badge from '@mui/material/Badge';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
+import { Badge, IconButton, AppBar, Box, Toolbar, Container, Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux'
   
 const Menu =() => {
+    const counter = useSelector(store => store.counter)
     const navigate = useNavigate()
-    function prueba (event){
+    const productos = (event) => {
+        event.preventDefault()
+        navigate("/")
+      };
+      const contacto = (event) => {
         event.preventDefault()
         navigate("/contacto")
+      };
+    
+      const carrito = (event) => {
+        event.preventDefault()
+        navigate("/carrito")
     }
-
     return (
-        <div className="topnav">
-           <Link to="/">Productos</Link>
-           <Link to="/contacto">Contacto</Link>
-            <div className='icono'>
-                <IconButton aria-label="cart" onClick={prueba}>
-                <Badge badgeContent={4} color="secondary">
+        <AppBar position="static">
+        <Container maxWidth="xl">
+            <Toolbar disableGutters>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
+                <Button onClick={productos} sx={{ my: 2, color: 'white', display: 'block' }}>
+                Productos
+                </Button>
+                <Button onClick={contacto} sx={{ my: 2, color: 'white', display: 'block' }}>
+                Contacto
+                </Button>
+            </Box>
+            <Box sx={{ flexGrow: 0 }}>
+                <IconButton aria-label="cart" onClick={carrito}>
+                <Badge badgeContent={counter} color="secondary">
                     <ShoppingCartIcon fontSize="large" sx={{ color: 'white' }}/>
                 </Badge>
                 </IconButton>
-            </div>
-        </div>
+            </Box>
+            </Toolbar>
+        </Container>
+        </AppBar>
     )
 }
 

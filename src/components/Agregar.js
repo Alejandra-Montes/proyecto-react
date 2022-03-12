@@ -1,16 +1,24 @@
 import { useState } from "react"
+import { useDispatch } from 'react-redux'
+import { increment, total, setImg } from '../store/actions'
 
-function Agregar(){
+function Agregar(props){
 
     const [ counter, setCounter ] = useState(0)
+    const dispatch = useDispatch()
 
     const decrementar = () =>{
-        console.log(counter)
         if(counter === 0){
             setCounter(0) 
         } else {
             setCounter(counter - 1) 
         }
+    }
+    const agregar = () =>{
+        console.log(props.producto)
+        dispatch(increment())
+        dispatch(total(counter * props.producto.precio))
+        dispatch(setImg(props.producto))
     }
     return (
         <div>
@@ -18,7 +26,7 @@ function Agregar(){
             {counter} 
             <button onClick={() => setCounter(counter + 1)}>+</button>
             <br></br>
-            <button>Agregar</button>
+            <button onClick={agregar} disabled={counter == 0}>Agregar</button>
         </div>
     )
 }

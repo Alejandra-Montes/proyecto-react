@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Container, Grid } from '@mui/material'
 import cheetosJalapeño from '../assets/img/cheetos-jalapenio.jpeg';
 import hobs from '../assets/img/hobbs-bubba.jpeg';
 import jolly from '../assets/img/jolly-rancher.jpeg';
@@ -67,17 +68,23 @@ function Productos(){
         {nombre: 'Life Savers Gummies Berries', ruta: lifeSaver, precio: 35}
       ])
     return(
-    <div>
-        <Producto listaNombres={listaNombres} />
-        <br></br>
+      <Container className='container'>
+        <Grid container spacing={5} lg={12} md={12} sm={12} xs={12}>
+          <Producto listaNombres={listaNombres} />
+        </Grid>
+        <Grid container spacing={3} lg={12} md={12} sm={12} xs={12}>
         <Producto listaNombres={listaNombresOtro} />
-        <br></br>
-        <Producto listaNombres={listaNombresTres} />
-        <br></br>
-        <Producto listaNombres={listaNombresCuatro} />
-        <br></br>
-        <Producto listaNombres={listaNombresCinco} />
-    </div>
+        </Grid>
+        <Grid container spacing={3} lg={12} md={12} sm={12} xs={12}>
+          <Producto listaNombres={listaNombresTres} />
+        </Grid>
+        <Grid container spacing={3} lg={12} md={12} sm={12} xs={12}>
+          <Producto listaNombres={listaNombresCuatro} />
+        </Grid>
+        <Grid container spacing={3} lg={12} md={12} sm={12} xs={12}>
+          <Producto listaNombres={listaNombresCinco} />
+        </Grid>
+      </Container>
     )
 }
 
