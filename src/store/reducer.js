@@ -23,7 +23,6 @@ function reducer (state = initialState, action){
                 }
         }
         case 'DELETE_IMG': {
-            console.log(payload)
             return{
                 ...state,
                 img: payload

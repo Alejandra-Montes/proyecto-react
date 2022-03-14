@@ -26,12 +26,10 @@ function Pagando(){
    const dispatch = useDispatch()
 
    const handleClick = () => {
-       console.log('Realizando el pago...')
        setOpen(true)
     };
 
     const handleClose = () => {
-        console.log('Limpiando formulario...')
         setOpen(false)
         setNombre('')
         setCorreo('')
@@ -41,7 +39,6 @@ function Pagando(){
      };
 
     const handleCloseOK = () => {
-        console.log('Limpiando formulario y carrito...')
         setOpen(false)
         setNombre('')
         setCorreo('')

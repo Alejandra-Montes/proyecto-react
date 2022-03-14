@@ -12,13 +12,11 @@ function Carrito(){
     const dispatch = useDispatch()
 
     const cancelarpedido = (event) =>{
-      console.log('Cancelando pedido y vaciando carrito...');
       dispatch(vaciarcarrito(0))
       navigate("/")
 
   }
     const pagar = (event) =>{
-        console.log('Pagando la cuenta...');
         navigate("/pagar")
     } 
 

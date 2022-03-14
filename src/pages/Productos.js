@@ -36,7 +36,7 @@ function Productos(){
         {id: 5, nombre: 'Oreo Dark Chocolate', ruta: oreo, precioUnitario: 120, cantidadCompra: 0, totalPagarCompra: 0}
       ])
     
-      const [listaNombresOtro, setListaNombresOtro]=useState([
+      const [listaNombresDos, setListaNombresOtro]=useState([
         {id: 6, nombre: 'Ooze Chewz', ruta: ooze, precioUnitario: 30, cantidadCompra: 0, totalPagarCompra: 0}, 
         {id: 7, nombre: 'Pop tarts cherry', ruta: poptarts, precioUnitario: 60, cantidadCompra: 0, totalPagarCompra: 0},
         {id: 8, nombre: 'Sour punch', ruta: punch, precioUnitario: 80, cantidadCompra: 0, totalPagarCompra: 0}, 
@@ -74,7 +74,7 @@ function Productos(){
           <Producto listaNombres={listaNombres} />
         </Grid>
         <Grid  >
-        <Producto listaNombres={listaNombresOtro} />
+        <Producto listaNombres={listaNombresDos} />
         </Grid>
         <Grid >
           <Producto listaNombres={listaNombresTres} />

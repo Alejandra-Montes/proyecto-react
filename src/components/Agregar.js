@@ -15,7 +15,6 @@ function Agregar(props){
         disminuyeproducto();
     }
     const agregar = () =>{
-        console.log(props.producto);
         dispatch(actualizacarrito(counter));
         dispatch(total(counter * props.producto.precioUnitario));
         dispatch(setImg(props.producto));
@@ -24,8 +23,6 @@ function Agregar(props){
         props.producto.totalPagarCompra = counter * props.producto.precioUnitario;
     }
     const disminuyeproducto = () =>{
-        console.log('Disminuyendo producto...');
-        console.log(props.producto);
         dispatch(actualizacarrito(-1));
         dispatch(total(-props.producto.precioUnitario));
  
@@ -33,7 +30,6 @@ function Agregar(props){
         props.producto.totalPagarCompra = (counter * props.producto.precioUnitario) - props.producto.precioUnitario;
         
         if (props.producto.cantidadCompra == 0) {
-            console.log('Eliminando producto del carrito...');
             dispatch(deleteImg(props.producto));
         }
     } 
