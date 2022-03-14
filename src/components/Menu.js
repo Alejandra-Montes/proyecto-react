@@ -3,29 +3,36 @@ import { Badge, IconButton, AppBar, Box, Toolbar, Container, Button } from '@mui
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux'
-  
+import { vaciarcarrito } from '../store/actions'
+import { useDispatch } from 'react-redux'
+
+
 const Menu =() => {
     const counter = useSelector(store => store.counter)
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+    
     const productos = (event) => {
-        event.preventDefault()
+      event.preventDefault()
         navigate("/")
       };
-      const contacto = (event) => {
+
+    const contacto = (event) => {
         event.preventDefault()
         navigate("/contacto")
-      };
+    };
     
-      const carrito = (event) => {
+    const carrito = (event) => {
         event.preventDefault()
         navigate("/carrito")
     }
+
     return (
         <AppBar position="static">
         <Container maxWidth="xl">
             <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
-                <Button onClick={productos} sx={{ my: 2, color: 'white', display: 'block' }}>
+                <Button onClick={productos}sx={{ my: 2, color: 'white', display: 'block' }}>
                 Productos
                 </Button>
                 <Button onClick={contacto} sx={{ my: 2, color: 'white', display: 'block' }}>

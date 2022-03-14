@@ -1,4 +1,12 @@
-.cuadro {
+.filaCuadros {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 5%; 
+ }
+ 
+  .cuadro {
     width: 250px;
     height: 250px;
     background-color: white;
@@ -7,12 +15,55 @@
     justify-content: space-around;
     flex-direction: column;
 }
+
 .cuadro:hover {
-    background-color: #F3F3F3;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(236, 230, 221);
 }
 
-.name{
-    font-family: fantasy;
-    font-weight: 700;
-    font-size: large;
+.imagenproductos {
+    width: 50%;
+    height: 50%;
+}
+
+.nameproductos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: center;
+    font-weight: bold;
+}
+
+.botonagregar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    width: 80px;
+    height: 20px;
+}
+
+.botondecremento {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+.botonincremento {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+.contadorproductos {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
 }
