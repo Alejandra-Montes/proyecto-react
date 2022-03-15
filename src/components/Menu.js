@@ -3,14 +3,11 @@ import { Badge, IconButton, AppBar, Box, Toolbar, Container, Button } from '@mui
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux'
-import { vaciarcarrito } from '../store/actions'
-import { useDispatch } from 'react-redux'
 
 
 const Menu =() => {
     const counter = useSelector(store => store.counter)
     const navigate = useNavigate()
-    const dispatch = useDispatch()
     
     const productos = (event) => {
       event.preventDefault()

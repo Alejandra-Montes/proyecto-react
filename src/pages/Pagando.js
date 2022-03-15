@@ -1,18 +1,11 @@
-import { makeStyles } from "@material-ui/core";
-import { Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, TextField, Typography } from "@mui/material"
+import { Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, TextField } from "@mui/material"
 import { useState } from "react";
 import { useSelector } from 'react-redux'
 import { vaciarcarrito } from '../store/actions'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
 
 import '../css/pagando.css';
-
-const useStyles = makeStyles(() => ({
-    wrapIcon: {
-      alignItems: "center",
-      display: "flex"
-    }
-  }));
 
 function Pagando(){
    const [nombre, setNombre] = useState('');
@@ -21,6 +14,7 @@ function Pagando(){
    const [tarjeta, setTarjeta] = useState('');
    const [direccionenvio, setsetDireccionenvio] = useState('');
    const [open, setOpen] = useState(false)
+   const navigate = useNavigate()
    
    const totalPrecio = useSelector(store => store.totalPrecio)
    const dispatch = useDispatch()
@@ -46,6 +40,7 @@ function Pagando(){
         setsetDireccionenvio('')
         setTarjeta('')
         dispatch(vaciarcarrito(0))
+        navigate("/")
     };
 
     return (
