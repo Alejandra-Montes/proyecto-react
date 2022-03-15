@@ -1,7 +1,7 @@
 import '../css/carrito.css'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { vaciarcarrito, deleteImg, restarprecio } from '../store/actions'
+import { vaciarcarrito, updateList, restarprecio } from '../store/actions'
 import { useDispatch } from 'react-redux'
 import EliminarProducto from '../components/EliminarProducto'
 
@@ -24,7 +24,7 @@ function Carrito(){
       const lstImg = [...img]
 
       lstImg.splice(key, 1)
-      dispatch(deleteImg(lstImg))
+      dispatch(updateList(lstImg))
       dispatch(restarprecio(producto))
     }
     return (
@@ -45,7 +45,7 @@ function Carrito(){
         <br></br>
         <button className="botones" onClick={cancelarpedido}>Cancelar Pedido</button>  
         <br></br>
-        <button className="botones" onClick={pagar} disabled={totalPrecio == 0}>Pagar</button>
+        <button className="botones" onClick={pagar} disabled={totalPrecio === 0}>Pagar</button>
       </div>
     </div>
     )

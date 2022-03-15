@@ -1,9 +1,12 @@
+import { AddCircle, DoDisturbOn } from "@mui/icons-material"
+import { Button, IconButton } from "@mui/material"
 import { useState } from "react"
-import { useDispatch } from 'react-redux'
-import { total, setImg, actualizacarrito, deleteImg } from '../store/actions'
+import { useDispatch, useSelector } from 'react-redux'
+import { total, updateList, actualizacarrito } from '../store/actions'
 
 function Agregar(props){
     const [ counter, setCounter ] = useState(0)
+    const lstProducto = useSelector(store => store.img)
     const dispatch = useDispatch()
 
     const decrementar = () =>{
@@ -12,34 +15,27 @@ function Agregar(props){
         } else {
             setCounter(counter - 1) 
         }
-        disminuyeproducto();
     }
     const agregar = () =>{
         dispatch(actualizacarrito(counter));
         dispatch(total(counter * props.producto.precioUnitario));
-        dispatch(setImg(props.producto));
- 
-        props.producto.cantidadCompra = counter;
-        props.producto.totalPagarCompra = counter * props.producto.precioUnitario;
+        props.producto.cantidadCompra = counter
+        props.producto.totalPagarCompra = counter * props.producto.precioUnitario
+        const copiaLista = [...lstProducto, props.producto]
+        dispatch(updateList(copiaLista));
     }
-    const disminuyeproducto = () =>{
-        dispatch(actualizacarrito(-1));
-        dispatch(total(-props.producto.precioUnitario));
- 
-        props.producto.cantidadCompra = props.producto.cantidadCompra - 1;
-        props.producto.totalPagarCompra = (counter * props.producto.precioUnitario) - props.producto.precioUnitario;
-        
-        if (props.producto.cantidadCompra == 0) {
-            dispatch(deleteImg(props.producto));
-        }
-    } 
+    
     return (
         <div>
-            <button className="botondecremento" onClick={decrementar}>-</button> 
+            <IconButton aria-label="cart" onClick={decrementar}>
+                <DoDisturbOn fontSize="small" sx={{ color: 'black' }}/>
+            </IconButton>
             <label className="contadorproductos">{counter}</label>
-            <button className="botonincremento" onClick={() => setCounter(counter + 1)}>+</button>
+            <IconButton aria-label="cart" onClick={() => setCounter(counter + 1)}>
+                <AddCircle fontSize="small" sx={{ color: 'black' }}/>
+            </IconButton>
             <br></br>
-            <button className="botonagregar" onClick={agregar} disabled={counter == 0}>Agregar</button>
+            <Button variant="outlined" className="botonagregar" onClick={agregar} disabled={counter == 0}>Agregar</Button>
        </div>
     )
 }

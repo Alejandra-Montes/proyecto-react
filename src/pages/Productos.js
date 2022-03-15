@@ -29,43 +29,43 @@ import Producto from "../components/Producto";
 
 function Productos(){
     const [listaNombres, setListaNombres]=useState([
-        {id: 1, nombre: 'Cheetos chedar jalapeño', ruta: cheetosJalapeño, precioUnitario: 70, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 2, nombre: 'Hubba Bubba', ruta: hobs, precioUnitario: 50, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 3, nombre: 'Jolly ranches bites', ruta: jolly, precioUnitario: 35, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 4, nombre: 'Big Chewy Nerds', ruta: nerds, precioUnitario: 30, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 5, nombre: 'Oreo Dark Chocolate', ruta: oreo, precioUnitario: 120, cantidadCompra: 0, totalPagarCompra: 0}
+        {nombre: 'Cheetos chedar jalapeño', ruta: cheetosJalapeño, precioUnitario: 70, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Hubba Bubba', ruta: hobs, precioUnitario: 50, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Jolly ranches bites', ruta: jolly, precioUnitario: 35, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Big Chewy Nerds', ruta: nerds, precioUnitario: 30, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Oreo Dark Chocolate', ruta: oreo, precioUnitario: 120, cantidadCompra: 0, totalPagarCompra: 0}
       ])
     
       const [listaNombresDos, setListaNombresOtro]=useState([
-        {id: 6, nombre: 'Ooze Chewz', ruta: ooze, precioUnitario: 30, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 7, nombre: 'Pop tarts cherry', ruta: poptarts, precioUnitario: 60, cantidadCompra: 0, totalPagarCompra: 0},
-        {id: 8, nombre: 'Sour punch', ruta: punch, precioUnitario: 80, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 9, nombre: 'Skittles with berry', ruta: purpleSkittles, precioUnitario: 40, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 10, nombre: 'Reeses Miniature Cups', ruta: reeses, precioUnitario: 50, cantidadCompra: 0, totalPagarCompra: 0}
+        {nombre: 'Ooze Chewz', ruta: ooze, precioUnitario: 30, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Pop tarts cherry', ruta: poptarts, precioUnitario: 60, cantidadCompra: 0, totalPagarCompra: 0},
+        {nombre: 'Sour punch', ruta: punch, precioUnitario: 80, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Skittles with berry', ruta: purpleSkittles, precioUnitario: 40, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Reeses Miniature Cups', ruta: reeses, precioUnitario: 50, cantidadCompra: 0, totalPagarCompra: 0}
       ])
     
       const [listaNombresTres, setListaNombresTres]=useState([
-        {id: 11, nombre: 'Fruit Roll-Ups', ruta: rollup, precioUnitario: 40, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 12, nombre: 'Skittles original', ruta: skittles, precioUnitario: 20, cantidadCompra: 0, totalPagarCompra: 0},
-        {id: 13, nombre: 'Air Heads bites', ruta: airHeads, precioUnitario: 25, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 14, nombre: 'Lucky Charms', ruta: luckyCharms, precioUnitario: 170, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 15, nombre: 'Doritos Flamin Hot', ruta: doritosFlamin, precioUnitario: 100, cantidadCompra: 0, totalPagarCompra: 0}
+        {nombre: 'Fruit Roll-Ups', ruta: rollup, precioUnitario: 40, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Skittles original', ruta: skittles, precioUnitario: 20, cantidadCompra: 0, totalPagarCompra: 0},
+        {nombre: 'Air Heads bites', ruta: airHeads, precioUnitario: 25, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Lucky Charms', ruta: luckyCharms, precioUnitario: 170, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Doritos Flamin Hot', ruta: doritosFlamin, precioUnitario: 100, cantidadCompra: 0, totalPagarCompra: 0}
       ])
     
       const [listaNombresCuatro, setListaNombresCuatro]=useState([
-        {id: 16, nombre: 'Doritos Tapatio', ruta: doritosTapatios, precioUnitario: 120, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 17, nombre: 'Froot Loops Marshmallows', ruta: footMarsh, precioUnitario: 150, cantidadCompra: 0, totalPagarCompra: 0},
-        {id: 18, nombre: 'Lays BBQ', ruta: laysBbq, precioUnitario: 140, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 19, nombre: 'Oreo Red Velvet', ruta: oreoRed, precioUnitario: 110, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 20, nombre: 'Oreo birthday cake', ruta: oCake, precioUnitario: 115, cantidadCompra: 0, totalPagarCompra: 0}
+        {nombre: 'Doritos Tapatio', ruta: doritosTapatios, precioUnitario: 120, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Froot Loops Marshmallows', ruta: footMarsh, precioUnitario: 150, cantidadCompra: 0, totalPagarCompra: 0},
+        {nombre: 'Lays BBQ', ruta: laysBbq, precioUnitario: 140, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Oreo Red Velvet', ruta: oreoRed, precioUnitario: 110, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Oreo birthday cake', ruta: oCake, precioUnitario: 115, cantidadCompra: 0, totalPagarCompra: 0}
       ])
     
       const [listaNombresCinco, setListaNombresCinco]=useState([
-        {id: 21, nombre: 'Swiss Rolls', ruta: swissRolls, precioUnitario: 95, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 22, nombre: 'Rufles Flamin Hot', ruta: ruflesFlamin, precioUnitario: 115, cantidadCompra: 0, totalPagarCompra: 0},
-        {id: 23, nombre: 'Oreo Fudge Covered with Mint', ruta: oMenta, precioUnitario: 120, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 24, nombre: 'Lucky Charms Chocolate', ruta: luckeChocolate, precioUnitario: 135, cantidadCompra: 0, totalPagarCompra: 0}, 
-        {id: 25, nombre: 'Life Savers Gummies Berries', ruta: lifeSaver, precioUnitario: 35, cantidadCompra: 0, totalPagarCompra: 0}
+        {nombre: 'Swiss Rolls', ruta: swissRolls, precioUnitario: 95, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Rufles Flamin Hot', ruta: ruflesFlamin, precioUnitario: 115, cantidadCompra: 0, totalPagarCompra: 0},
+        {nombre: 'Oreo Fudge Covered with Mint', ruta: oMenta, precioUnitario: 120, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Lucky Charms Chocolate', ruta: luckeChocolate, precioUnitario: 135, cantidadCompra: 0, totalPagarCompra: 0}, 
+        {nombre: 'Life Savers Gummies Berries', ruta: lifeSaver, precioUnitario: 35, cantidadCompra: 0, totalPagarCompra: 0}
       ])
 
     return(

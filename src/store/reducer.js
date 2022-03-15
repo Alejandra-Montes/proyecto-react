@@ -16,25 +16,19 @@ function reducer (state = initialState, action){
             totalPrecio: state.totalPrecio + payload
             }
         }
-        case 'SET_IMG': {
+        case 'UPDATE_LIST': {
             return{
                 ...state,
-                img: [...state.img, payload],
+                img: payload,
                 }
         }
-        case 'DELETE_IMG': {
-            return{
-                ...state,
-                img: payload
-                }
-        }
-        case 'ACTUALIZAPRODUCTOS': {
+        case 'ACTUALIZA_PRODUCTOS': {
             return{
                 ...state,
                 counter: state.counter + payload,
             }
         }
-        case 'LIMPIARCARRITO': {
+        case 'LIMPIAR_CARRITO': {
             return{
                 counter: payload,
                 totalPrecio: payload,

@@ -1,11 +1,13 @@
-import { useEffect } from "react";
+import { Cancel } from "@mui/icons-material"
+import { IconButton } from "@mui/material"
 
 function EliminarProducto(props){
+    // Cancel
     return (
         <div>
-         <button onClick={props.eliminarProducto}>
-            X
-         </button>
+            <IconButton aria-label="cart" onClick={props.eliminarProducto}>
+                <Cancel fontSize="large" sx={{ color: 'red' }}/>
+            </IconButton>
       </div>
     )
 }
